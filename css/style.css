@@ -14,13 +14,14 @@ body{
 }
 
 .header{
-  background-color: rgb(0, 100, 3);
+  background-color: rgba(221, 2, 0,1);
   text-decoration: none;
   position: fixed;
-  padding: 0.1rem 0;
+  padding: 0.5rem 0;
   left: 0;
   top: 0;
   width: 100%;
+  border-style: solid;
 }
 .main{
   padding: 11rem;
@@ -41,6 +42,15 @@ body{
   padding: 0;
   list-style: none;
 
+
+}
+.logo{
+  width: 10%;
+  border-radius: 5%;
+  border-style: inset;
+  position: relative;
+  left: 10%;
+
 }
 .navegacion ul li{
   display: inline-block;
@@ -54,22 +64,26 @@ body{
 .navegacion ul li a:hover{
   background-color:rgb(60, 60, 57)
 }
-.logo{
-  letter-spacing: 15px;
-}
+
 .menu-icon{
   display: none;
+  color: white;
 }
 .footerclass{
   background-color: rgb(64, 64, 64);
+  padding:1rem 0;
 
-  padding:4rem 0;
-  margin:;
 }
+.footerclass p{
+  color: white;
+}
+/*media*/
+
 @media only screen and (max-width: 767px) {
   .navegacion{
     width: 100%;
     margin-top: 1rem;
+
   }
   .navegacion ul li{
     display: block;
@@ -78,7 +92,9 @@ body{
     display: block;
     padding: 0.5rem 0rem;
     transition: all 0.4s linear;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
   }
 .menu-icon{
   display: block;
