@@ -15,14 +15,15 @@ body{
 }
 
 .header{
-  background-color: rgba(221, 2, 0,1);
+  background-color: rgb(41, 41, 42);
   text-decoration: none;
   position: fixed;
   padding: 0.5rem 0;
   left: 0;
   top: 0;
   width: 100%;
-  border-style: solid;
+  border-color: rgb(130, 127, 130);
+  border-style: ridge;
 }
 .main{
   padding: 11rem;
@@ -72,7 +73,7 @@ body{
 }
 .footerclass{
   background-color: rgb(64, 64, 64);
-  padding:1rem 0;
+  padding: 1rem 0;
   margin: 0;
   padding: 0;
   display: flex;
@@ -96,6 +97,7 @@ form{
   margin: 0 auto;
 }
 fieldset{
+  display: inline-block;
   background: #fff;
   border: 1px  #333;
   border-radius: 5px;
@@ -109,19 +111,31 @@ input, button{
   padding: 0;
 }
 input{
+  color: #666;
   border: none;
+  z-index: 2;
 }
 button{
-  width: 50px;
+  font-size: 1.4em;
+  width: 40px;
   border: none;
   background-color: #333;
+  transform: translate(-50px, 0);
+  transition-duration: 3s;
 }
-fa-search{
-  color: white;
 
-}
 input:focus{
   outline: none;
+}
+input:focus + button{
+  transform: translate(0,0);
+  transition-duration: 1s;
+  border-radius: 3px;
+  background-color:rgb(89, 89, 89) ;
+}
+
+.fa-search:before{
+  color: white;
 }
 
 /*media*/
