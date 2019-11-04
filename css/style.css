@@ -1,11 +1,12 @@
 
 body{
   font-family: georgia, times, serif;
-  margin: 0;
-  font-size: 1.2rem;
-  line-height: 1.6em;
+
+
   color: #333;
-  height: 100%
+
+
+  background-color: rgb(8, 8, 7)
 
 }
 .container{
@@ -26,7 +27,7 @@ body{
   border-style: ridge;
 }
 .main{
-  padding: 11rem;
+  padding: 4rem;
 }
 .header a{
   text-decoration: none;
@@ -43,6 +44,8 @@ body{
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
+  left: -60;
 
 
 }
@@ -51,7 +54,7 @@ body{
   border-radius: 5%;
   border-style: inset;
   position: relative;
-  left: -13%;
+  left: -25%;
 
 }
 .navegacion ul li{
@@ -71,16 +74,32 @@ body{
   display: none;
   color: white;
 }
-.footerclass{
-  background-color: rgb(64, 64, 64);
-  padding: 1rem 0;
-  margin: 0;
-  padding: 0;
+/*footer*/
+.container-footer{
+  width: 100%;
+  background-color: rgb(41, 41, 42);
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-
+  justify-content: space-around;
+  align-items: center;
+  border-style: ridge;
+  border-color: rgb(130, 127, 130);
 }
+
+.logo-tmdb{
+  width: 70px;
+  border-radius: 8px;
+}
+.container-footer p{
+  color: white;
+  font-size: 15px;
+}
+
+
+
+
+
+
 /*Boton de Buscar*/
 .search1{
 
@@ -101,7 +120,7 @@ fieldset{
   background: #fff;
   border: 1px  #333;
   border-radius: 5px;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 7px;
 }
 input, button{
   position: relative;
@@ -136,6 +155,10 @@ input:focus + button{
 
 .fa-search:before{
   color: white;
+}
+.prox{
+  font-size: 30px;
+  text-align: center;
 }
 
 /*media*/
