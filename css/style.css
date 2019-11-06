@@ -50,7 +50,7 @@ body{
 
 }
 .logo{
-  width: 10%;
+  width: 7%;
   border-radius: 5%;
   border-style: inset;
   position: relative;
@@ -160,6 +160,41 @@ input:focus + button{
   font-size: 30px;
   text-align: center;
 }
+
+/*Pagina de informacion de series*/
+.main{
+  background-color;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+}
+.info-series{
+  background-color: red;
+
+}
+.txt{
+  width: 30%;
+  margin-left: 20px;
+}
+.img-series3{
+  width: 20%;
+  height: 20%;
+
+}
+.video{
+  width: 100px;
+  height: 100px;
+  margin-left: 2%;
+
+}
+.p-para-borrar{
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
 
 /*media*/
 
