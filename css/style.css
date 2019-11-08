@@ -9,16 +9,10 @@ body{
   background-color: rgb(8, 8, 7)
 
 }
-.container{
-  width: 85%;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
 .header{
+  position: relative;
   background-color: rgb(41, 41, 42);
   text-decoration: none;
-  position: fixed;
   padding: 0.5rem 0;
   left: 0;
   top: 0;
@@ -26,6 +20,13 @@ body{
   border-color: rgb(130, 127, 130);
   border-style: ridge;
 }
+.container{
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
 .main{
   padding: 4rem;
 }
@@ -102,7 +103,6 @@ body{
 
 /*Boton de Buscar*/
 .search1{
-
 display: flex;
 margin: 0;
 padding: 0 0 0 0;
@@ -240,7 +240,6 @@ input:focus + button{
   display: flex;
   margin: 0;
   padding: 0 0 0 0;
-  position: fixed;
   left: 30%;
   bottom: 0%;
   top: 3%;
@@ -257,7 +256,7 @@ input:focus + button{
   display: flex;
   margin: 0;
   padding: 0 0 0 0;
-  position: fixed;
+  
   left: 20%;
   bottom: 0%;
   top: 1.2%;
