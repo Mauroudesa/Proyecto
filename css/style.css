@@ -194,7 +194,10 @@ input:focus + button{
   align-items: center;
   font-size: 40px;
 }
-
+/*despues de js*/
+.ul-prueba{
+  width: 10%;
+}
 
 /*media*/
 
