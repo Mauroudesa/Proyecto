@@ -1,14 +1,11 @@
 
 body{
   font-family: georgia, times, serif;
-
-
   color: #333;
-
-
   background-color: rgb(8, 8, 7)
 
 }
+
 .header{
   position: relative;
   background-color: rgb(41, 41, 42);
@@ -100,7 +97,6 @@ body{
 
 
 
-
 /*Boton de Buscar*/
 .search1{
 display: flex;
@@ -175,24 +171,24 @@ input:focus + button{
 
 }
 .txt{
-  width: 30%;
-  margin-left: 20px;
+  font-size: 15px;
+  width: 25%;
+  margin-left: 25px;
 }
 .img-series3{
-  width: 20%;
-  height: 20%;
-
+  width: 33%;
 }
 .video{
   width: 100px;
   height: 100px;
   margin-left: 2%;
+  background-color: red;
 
 }
 .p-para-borrar{
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 95px;
 }
 /*despues de js*/
 
