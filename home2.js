@@ -12,26 +12,10 @@ menuBtn.click(function()  {
   }
 });
 
-fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=en-US&page=1')
-.then(function(respuesta){
-  return respuesta.json();
-})
-.then(function(datos){
-  console.log(datos);
-  var seriesArray = datos.results;
-  var lista = document.querySelector(".todas");
+var queryString = new URLSearchParams(location.search)
+var idSerie = busqueda.get("id")
 
-  for(var i=0; i<seriesArray.length; i++){
-    var li = '<li>'
-    li += '<a href="series.html?id='+seriesArray[i].id +'">'
-    li += '<img src="https://image.tmdb.org/t/p/original'+ seriesArray[i].poster_path +'">'
-    li+= '</a>'
-    li+= '</li>'
-    lista.innerHTML += li
-  }
-})
-
-  fetch('https://api.themoviedb.org/3/tv/popular?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=en-US&page=1')
+  fetch("https://api.themoviedb.org/3/tv/popular?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=en-US&page=1")
   .then(function(respuesta){
     return respuesta.json();
   })
@@ -87,6 +71,9 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
       lista.innerHTML += li
     }
   })
+
+
+
 
 
 
