@@ -22,10 +22,9 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
 
        <article class="txt">
       <p>${serieDetalle.name}</p>
-        <p>Genero</p>
-      <p>Lenguaje</p>
-        <p>Descripcion
-      sdaaaborum Lorem ipsum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.dolor c</p>
+        <p>${serieDetalle.genres}</p>
+      <p>${serieDetalle.languages}</p>
+        <p>${serieDetalle.overview}</p>
     </article>
       `;
     }
@@ -36,13 +35,14 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
  });
 
 // TRAILER
-
-fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=es-ES")
+console.log(id);
+fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f329224d7c1ce98a9")
   .then(function(respuesta) {
     return respuesta.json()
     console.log(respuesta);
   })
   .then(function(informacion) {
+    console.log(informacion);
     var serie = informacion.results
     var nombre = serie.name
     var id = serie[0].key
@@ -59,4 +59,22 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
     console.log("Error: " + error);
   })
 
+  fetch("https://api.themoviedb.org/3/tv/"+ id +"/recommendations?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
+  .then(function(respuesta){
+    return respuesta.json();
+  })
+  .then(function(datos){
+    console.log(datos);
+    var seriesArray = datos.results;
+    var lista = document.querySelector(".relacionadas");
+
+    for(var i=0; i<seriesArray.length; i++){
+      var li = '<li>'
+      li += '<a href="series.html?id='+seriesArray[i].id +'">'
+      li += '<img src="https://image.tmdb.org/t/p/original'+ seriesArray[i].poster_path +'">'
+      li+= '</a>'
+      li+= '</li>'
+      lista.innerHTML += li
+    }
+  })
 }
