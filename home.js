@@ -101,12 +101,14 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
         e.preventDefault()
         UIkit.notification().close()
         localStorage.setItem("user", usuario)
-        document.querySelector("button.btn-log").style.display = "none"
+        document.querySelector("button.btn-log")
         document.querySelector("li.prefes").style.display = "block"
-        document.querySelector("li.saludop").style.display = "block"
-        document.querySelector("p.saludo").innerHTML = "Hola " + usuario
-        document.querySelector("li.lg").style.display = "block"
-        document.querySelector(".addfav").style.display = "block"
+        document.querySelector("li.saludop")
+        document.querySelector("p.saludo")
+        document.querySelector("li.lg")
+
+
+
         document.querySelector(".uk-modal-close-default").click()
         var nombre = document.querySelector("input.name").value
 
@@ -125,6 +127,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
 
     }
   })
+// listadp de generos
 
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
    .then(res => res.json())
@@ -133,14 +136,9 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
    for (var i = 0; i < generos.length; i++) {
      var nombre = generos[i].name
      var idGenero = generos[i].id
-     document.querySelector('#generos').innerHTML += '<li><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
+     document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
    }
      })
-
-
-
-
-
-
+  
 
 }

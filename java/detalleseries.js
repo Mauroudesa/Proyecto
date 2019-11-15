@@ -7,7 +7,7 @@ var id = params.get('id');
 
 // INFO SERIE
 
-fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=es-ES")
+fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=en-en")
   .then(function(respuesta) {
     return respuesta.json()
     console.log(respuesta);
@@ -50,7 +50,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
     contenedorTrailer = document.querySelector(".main")
     contenedorTrailer.innerHTML +=`
     <article class="video">
-      <iframe width="560" height="315" src="${url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width= 470rem height= 300rem src="${url}" frameborder="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </article>
     `;
 

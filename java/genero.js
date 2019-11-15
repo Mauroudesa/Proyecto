@@ -1,5 +1,15 @@
 window.onload = function() {
+  var menuBtn = $('.menu-icon'),
+  menu = $('.navegacion ul');
 
+  menuBtn.click(function()  {
+    if ( menu.hasClass('visible') ) {
+      menu.removeClass('visible');
+
+    } else{
+      menu.addClass('visible');
+    }
+  });
   var queryString = new URLSearchParams(location.search)
   var idGenero = queryString.get("id")
   var genero = queryString.get("genero")
@@ -18,12 +28,13 @@ window.onload = function() {
               for (var i = 0; i < seriesArray.length; i++) {
                 var img = seriesArray[i].poster_path;
                 var id = seriesArray[i].id
-                document.querySelector(".fotoswrap").innerHTML+= "<li class="+"li-item"+ "tabindex="+"0"+"><a href=genero.html?idSeries=" + id + "><img class="+"img-li"+" src=" + "https://image.tmdb.org/t/p/w185" +img+"></a>"
+                document.querySelector(".fotoswrap").innerHTML+= "<li class="+"li-item"+ "tabindex="+"0"+"><a href=series.html?idSeries=" + id + "><img class="+"img-li"+" src=" + "https://image.tmdb.org/t/p/w185" +img+"></a>"
                 cont++;
 
-          }
-        })
 
+          }
+
+        })
   }
  // }
 }
