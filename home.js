@@ -86,6 +86,9 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
       li+= '</li>'
       lista.innerHTML += li
     }
+
+    // login
+
     document.querySelector("form.login").onsubmit = function(e) {
 
       var usuario = document.login.user.value;
@@ -101,14 +104,11 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
         e.preventDefault()
         UIkit.notification().close()
         localStorage.setItem("user", usuario)
-        document.querySelector("button.btn-log")
+        document.querySelector("button.login-button").style.display = "none"
         document.querySelector("li.prefes").style.display = "block"
-        document.querySelector("li.saludop")
-        document.querySelector("p.saludo")
-        document.querySelector("li.lg")
-
-
-
+        document.querySelector("li.saludop").style.display = "block"
+        document.querySelector("p.saludo").innerHTML = "Hola " + usuario
+        document.querySelector("li.lg").style.displindexay = "block"
         document.querySelector(".uk-modal-close-default").click()
         var nombre = document.querySelector("input.name").value
 
@@ -126,6 +126,8 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
 
 
     }
+
+
   })
 // listadp de generos
 
@@ -139,6 +141,6 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
      document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
    }
      })
-  
+
 
 }

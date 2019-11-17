@@ -23,31 +23,86 @@
   <body>
 
 
-  <header class="header">
-    <div class="container logo-container">
-      <img  src="img/logo.png" alt="" class="logo">
-      <span class="menu-icon"><i class="fas fa-align-justify"></i></span>
-      <nav class="navegacion">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="generos.html">Favoritos</a></li>
-          <li><a href="#">Listado de generos</a></li>
+    <header class="header">
 
-        </ul>
 
-      </nav>
-    </div>
-    <div class="search1">
-      <form class="" action="index.html" method="post">
-        <fieldset>
-          <input id="srch" type="search" name="" value="" placeholder="Buscar ...">
-          <button type="sibmit" name="button" class="botonDeBuscador">
-          <i class="fa fa-search" aria-hidden="true"></i> </button>
-        </fieldset>
-      </form>
-    </div>
+      <div class="container logo-container">
+        <img  src="img/logo.png" alt="" class="logo">
+        <span class="menu-icon"><i class="fas fa-align-justify"></i></span>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="home.html" class="aDeHome">Home</a></li>
 
-  </header>
+            <li ><a href="#" class="aDelHeader"><div class="uk-inline" >
+      <button class="geneross" type="button">Generos</button>
+      <div uk-dropdown id="generos"></div>
+  </div></a></li>
+            <button class="login-button" type="button" uk-toggle="target: #modal-close-default">Login</button>
+            <li class="li-line prefes" style="display: none;">
+                <li class="li-line saludop"  style="display: none;">
+                  <p class="saludo"></p>
+                  </li>
+                  <li class="li-line lg" style="display: none;">
+
+                    <a class="li-a logout" href="index.html">Log Out</a>
+                  </li>
+
+
+            <nav class="uk-navbar-container" uk-navbar>
+
+        </div>
+    </nav>
+
+
+          </ul>
+
+
+        </nav>
+
+      </div>
+      <div id="modal-close-default" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body pop-log" >
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+              <h2 class="uk-modal-title">login</h2>
+              <form class="login" name="login" action="index.html" method="get">
+                <fieldset class="uk-fieldset">
+                   <div class="uk-margin">
+                      <div class="uk-inline">
+
+                      <span class="uk-form-icon" uk-icon="icon: user"></span>
+
+                       <input  class="uk-input" type="text" name="user" id="user" placeholder= "Nombre de usuario" >
+                     </div>
+                   </div>
+                   <div class="uk-margin">
+                     <div class="uk-inline">
+                       <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                       <input class="uk-input" type="email" id="mail" name="mail" placeholder="Email">
+                     </div>
+                   </div>
+                   <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                       <label><input id="gen" class="uk-radio" type="radio" name="genero" value="masc"> Masc</label>
+                       <label><input id="gen" class="uk-radio" type="radio" name="genero" value="fem"> Fem</label>
+                       <label><input id="gen" class="uk-radio" type="radio" name="genero" value="otro"> Otro</label>
+                   </div>
+                   <button type="submit" href="index.html" class="uk-button uk-button-default">Login</button>
+
+               </fieldset>
+              </form>
+          </div>
+      </div>
+      <div class="search1">
+        <form class="buscadorr" action="buscador.html" method="GET" name="formularioDeBusqueda">
+          <fieldset>
+            <input id="srch" type="search" name="busqueda" value="" placeholder="Buscar ...">
+            <button type="submit" class="botonDeBuscador">
+            <i class="fa fa-search" aria-hidden="true"></i> </button>
+          </fieldset>
+        </form>
+
+      </div>
+
+    </header>
   <main class="main">
 
 

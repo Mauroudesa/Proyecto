@@ -27,16 +27,23 @@
       <span class="menu-icon"><i class="fas fa-align-justify"></i></span>
       <nav class="navegacion">
         <ul>
-          <li><a href="home.html">Home</a></li>
+          <li><a href="home.html" class="aDeHome">Home</a></li>
 
           <li ><a href="#" class="aDelHeader"><div class="uk-inline" >
-    <button class="" type="button">generos</button>
+    <button class="geneross" type="button">Generos</button>
     <div uk-dropdown id="generos"></div>
 </div></a></li>
-          <button class="" type="button" uk-toggle="target: #modal-close-default">Login</button>
+          <button class="login-button" type="button" uk-toggle="target: #modal-close-default">Login</button>
           <li class="li-line prefes" style="display: none;">
-            <a class="li-a logout" href="home.html">Log Out</a>
-          </li>
+              <li class="li-line saludop"  style="display: none;">
+                <p class="saludo"></p>
+                </li>
+                <li class="li-line lg" style="display: none;">
+
+                  <a class="li-a logout" href="index.html">Log Out</a>
+                </li>
+
+
           <nav class="uk-navbar-container" uk-navbar>
 
       </div>
@@ -52,7 +59,7 @@
     <div id="modal-close-default" uk-modal>
         <div class="uk-modal-dialog uk-modal-body pop-log" >
             <button class="uk-modal-close-default" type="button" uk-close></button>
-            <h2 class="uk-modal-title " >Login</h2>
+            <h2 class="uk-modal-title">login</h2>
             <form class="login" name="login" action="index.html" method="get">
               <fieldset class="uk-fieldset">
                  <div class="uk-margin">
