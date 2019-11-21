@@ -12,6 +12,7 @@ menuBtn.click(function()  {
   }
 });
 
+
 fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=en-US&page=1')
 .then(function(respuesta){
   return respuesta.json();
@@ -99,7 +100,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
 
       if (usuario== '' || mail== '' && mail.value.match(formatEmail)== null  || genero== '') {
         e.preventDefault()
-        UIkit.notification({message: 'Porfavor, complete el formulario', status: 'warning',  timeout: 2000})
+        UIkit.notification({message: 'Por favor, complete el formulario', status: 'warning',  timeout: 2000})
       }else {
         e.preventDefault()
         UIkit.notification().close()
@@ -138,7 +139,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
    for (var i = 0; i < generos.length; i++) {
      var nombre = generos[i].name
      var idGenero = generos[i].id
-     document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
+     document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href="genero.html?id='+ idGenero +'&nombre='+nombre+'">'+ nombre + '</a></li>'
    }
      })
 

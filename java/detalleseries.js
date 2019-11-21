@@ -37,10 +37,14 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
       <img class="img-series3" src="https://image.tmdb.org/t/p/original/${serieDetalle.poster_path}" alt="">
 
        <article class="txt">
-      <p>${serieDetalle.name}</p>
-        <p>${serieDetalle.genres}</p>
-      <p>${serieDetalle.languages}</p>
-        <p>${serieDetalle.overview}</p>
+      <p class="eep">${serieDetalle.name}</p>
+
+      <p>Género: ${serieDetalle.genres[1].name}</p>
+      <p>Idioma: ${serieDetalle.languages}</p>
+        <p>Descripción: ${serieDetalle.overview}</p>
+        <div class="trailer">
+
+        </div>
     </article>
       `;
     }
@@ -63,10 +67,10 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
     var nombre = serie.name
     var id = serie[0].key
     var url = 'https://www.youtube.com/embed/' + id
-    contenedorTrailer = document.querySelector(".main")
+    contenedorTrailer = document.querySelector(".trailer")
     contenedorTrailer.innerHTML +=`
     <article class="video">
-      <iframe width= 470rem height= 300rem src="${url}" frameborder="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width= 400rem height= 300rem src="${url}" frameborder="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </article>
     `;
 

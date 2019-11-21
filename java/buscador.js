@@ -48,7 +48,7 @@ for (var i = 0; i < resultadoDeBusqueda.length; i++) {
 
       if (usuario== '' || mail== '' && mail.value.match(formatEmail)== null  || genero== '') {
         e.preventDefault()
-        UIkit.notification({message: 'Porfavor, complete el formulario', status: 'warning',  timeout: 2000})
+        UIkit.notification({message: 'Por favor, complete el formulario', status: 'warning',  timeout: 2000})
       }else {
         e.preventDefault()
         UIkit.notification().close()
@@ -103,7 +103,7 @@ for (var i = 0; i < resultadoDeBusqueda.length; i++) {
 
            if (usuario== '' || mail== '' && mail.value.match(formatEmail)== null  || genero== '') {
              e.preventDefault()
-             UIkit.notification({message: 'Porfavor, complete el formulario', status: 'warning',  timeout: 2000})
+             UIkit.notification({message: 'Por favor, complete el formulario', status: 'warning',  timeout: 2000})
            }else {
              e.preventDefault()
              UIkit.notification().close()

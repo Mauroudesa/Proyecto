@@ -12,7 +12,7 @@ window.onload = function() {
   });
   var queryString = new URLSearchParams(location.search)
   var idGenero = queryString.get("id")
-  var genero = queryString.get("generos")
+  var genero = queryString.get("nombre")
   var cont = 2
   document.querySelector(".prox").innerHTML += genero
   // window.onscroll = function(ev) {
@@ -28,7 +28,7 @@ window.onload = function() {
               for (var i = 0; i < seriesArray.length; i++) {
                 var img = seriesArray[i].poster_path;
                 var id = seriesArray[i].id
-                document.querySelector(".fotoswrap").innerHTML+= "<li class="+"li-item"+ "tabindex="+"0"+"><a href=series.html?idSeries=" + id + "><img class="+"img-li"+" src=" + "https://image.tmdb.org/t/p/w185" +img+"></a>"
+                document.querySelector(".fotoswrap").innerHTML+= "<li class="+"li-item"+ "tabindex="+"0"+"><a href=series.html?id=" + id + "><img class="+"img-li"+" src=" + "https://image.tmdb.org/t/p/w185" +img+"></a>"
 
           }
 
@@ -82,7 +82,7 @@ window.onload = function() {
     for (var i = 0; i < generos.length; i++) {
       var nombre = generos[i].name
       var idGenero = generos[i].id
-      document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
+      document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href="genero.html?id='+ idGenero +'&nombre='+nombre+'">'+ nombre + '</a></li>'
     }
       })
 
