@@ -33,7 +33,9 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
     console.log(informacion);
     var serieDetalle = informacion
     var contenedorSeries = document.querySelector(".main")
+
     for (var i = 0; i < 1; i++){
+
       contenedorSeries.innerHTML +=`
       <img class="img-series3" src="https://image.tmdb.org/t/p/original/${serieDetalle.poster_path}" alt="">
 
@@ -42,17 +44,18 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
       <p>Género: ${serieDetalle.genres[1].name}</p>
       <p>Idioma: ${serieDetalle.languages}</p>
         <p>Descripción: ${serieDetalle.overview}</p>
-        <div class="trailer">
+        <div class="trailer1">
 
         </div>
     </article>
+
       `;
     }
 
   })
   .catch(function(errores){
     var contenido1 = document.querySelector(".main")
-    contenido1.innerHTML +='<h1>(._. )( ._.) No se puede cargar (⌣̩̩́_⌣̩̩̀) </h1>'
+    contenido1.innerHTML +='<h1 class ="h1deerror">(._. )( ._.) No se puede cargar (⌣̩̩́_⌣̩̩̀) </h1>'
    console.log(errores)
  });
 
@@ -69,7 +72,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
     var nombre = serie.name
     var id = serie[0].key
     var url = 'https://www.youtube.com/embed/' + id
-    contenedorTrailer = document.querySelector(".trailer")
+    contenedorTrailer = document.querySelector(".trailer1")
     contenedorTrailer.innerHTML +=`
     <article class="video">
       <iframe width= 400rem height= 300rem src="${url}" frameborder="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -77,10 +80,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
     `;
 
   })
-  .catch(function(error) {
-    var contenido2 = document.querySelector(".trailer")
-    contenido2.innerHTML +='<iframe width= 400rem height= 300rem src="https://www.youtube.com/embed/BJm-fwbJzEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  })
+
 
   // carrusel
 
