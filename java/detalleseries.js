@@ -1,6 +1,7 @@
 window.onload = function() {
-  var menuBtn = $('.menu-icon'),
-  menu = $('.navegacion ul');
+
+  var menuBtn = $('.menu-icon');
+  var menu = $('.navegacion ul');
 
   menuBtn.click(function()  {
     if ( menu.hasClass('visible') ) {
@@ -38,7 +39,6 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
 
        <article class="txt">
       <p class="eep">${serieDetalle.name}</p>
-
       <p>Género: ${serieDetalle.genres[1].name}</p>
       <p>Idioma: ${serieDetalle.languages}</p>
         <p>Descripción: ${serieDetalle.overview}</p>
@@ -51,6 +51,8 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=deebcdef6efa3e1f329224d7
 
   })
   .catch(function(errores){
+    var contenido1 = document.querySelector(".main")
+    contenido1.innerHTML +='<h1>(._. )( ._.) No se puede cargar (⌣̩̩́_⌣̩̩̀) </h1>'
    console.log(errores)
  });
 
@@ -76,8 +78,11 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
 
   })
   .catch(function(error) {
-    console.log("Error: " + error);
+    var contenido2 = document.querySelector(".trailer")
+    contenido2.innerHTML +='<iframe width= 400rem height= 300rem src="https://www.youtube.com/embed/BJm-fwbJzEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
   })
+
+  // carrusel
 
   fetch("https://api.themoviedb.org/3/tv/"+ id +"/recommendations?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US&page=1")
   .then(function(respuesta){
@@ -99,7 +104,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
   })
 
 
-
+  // Login
        document.querySelector("form.login").onsubmit = function(e) {
 
          var usuario = document.login.user.value;
@@ -146,7 +151,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"/videos?api_key=deebcdef6efa3e1f3
       for (var i = 0; i < generos.length; i++) {
         var nombre = generos[i].name
         var idGenero = generos[i].id
-        document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
+        document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href="genero.html?id='+ idGenero +'&nombre='+nombre+'">'+ nombre + '</a></li>'
       }
         })
 

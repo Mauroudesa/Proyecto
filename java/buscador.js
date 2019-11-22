@@ -26,9 +26,9 @@ window.onload = function () {
         })
         .then(function(informacion) {
 
-var resultadoDeBusqueda = informacion.results;
-console.log(resultadoDeBusqueda);
-for (var i = 0; i < resultadoDeBusqueda.length; i++) {
+  var resultadoDeBusqueda = informacion.results;
+  console.log(resultadoDeBusqueda);
+  for (var i = 0; i < resultadoDeBusqueda.length; i++) {
   var img = resultadoDeBusqueda[i].poster_path;
   var id = resultadoDeBusqueda[i].id;
   document.querySelector(".fotoswrap").innerHTML+= "<li class="+"li-item"+ "tabindex="+"0"+"><a href=series.html?id=" + id + "><img class="+"img-li"+" src=" + "https://image.tmdb.org/t/p/w185" +img+"></a>"
@@ -87,7 +87,7 @@ for (var i = 0; i < resultadoDeBusqueda.length; i++) {
    for (var i = 0; i < generos.length; i++) {
      var nombre = generos[i].name
      var idGenero = generos[i].id
-     document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
+     document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href="genero.html?id='+ idGenero +'&nombre='+nombre+'">'+ nombre + '</a></li>'
    }
      })
 
@@ -128,15 +128,3 @@ for (var i = 0; i < resultadoDeBusqueda.length; i++) {
            document.querySelector("li.saludop").style.display = "none"
            document.querySelector("button.btn-log").style.display = "block"
          }
-     // listadp de generos
-
-       fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
-        .then(res => res.json())
-        .then(data => {
-        var generos = data.genres
-        for (var i = 0; i < generos.length; i++) {
-          var nombre = generos[i].name
-          var idGenero = generos[i].id
-          document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href=genero.html?id='+ idGenero +'>'+ nombre +'</a></li>'
-        }
-          })

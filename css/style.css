@@ -277,6 +277,26 @@ input:focus + button{
     display: block;
 
   }
+  .login-button{
+    background-color: rgb(41,41,42);
+    color: orange;
+    border-style: none;
+    display: flex;
+    text-align: right;
+    justify-content: flex-start;
+
+    font-size: 15px;
+  }
+  .geneross{
+    width: 70px;
+    height: 20px;
+    background-color: rgb(41,41,42);
+    color: orange;
+    border-radius: none;
+    border-style: none;
+    justify-content: flex-start;
+    text-align: left;
+  }
 
   .search1{
 
@@ -302,6 +322,26 @@ input:focus + button{
   left: 20%;
   bottom: 0%;
   top: 1.2%;
+  }
+  .login-button{
+    background-color: rgb(41,41,42);
+    color: orange;
+    border-style: none;
+    display: flex;
+    text-align: right;
+    justify-content: flex-start;
+
+    font-size: 15px;
+  }
+  .geneross{
+    width: 70px;
+    height: 20px;
+    background-color: rgb(41,41,42);
+    color: orange;
+    border-radius: none;
+    border-style: none;
+    justify-content: flex-start;
+    text-align: left;
   }
 }
 

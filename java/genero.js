@@ -33,6 +33,7 @@ window.onload = function() {
           }
 
         })
+
   }
 
 
@@ -84,6 +85,11 @@ window.onload = function() {
       var idGenero = generos[i].id
       document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href="genero.html?id='+ idGenero +'&nombre='+nombre+'">'+ nombre + '</a></li>'
     }
+      })
+      .catch(function(error) {
+        var contenido2 = document.querySelector(".liGenero")
+        contenido2.innerHTML +='<img src="img/tmdb.png" alt="" class="logo-tmdb">'
+        console.log(error);
       })
 
 

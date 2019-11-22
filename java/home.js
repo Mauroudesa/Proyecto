@@ -1,5 +1,6 @@
 window.onload = function(){
 
+// elemento responsiv
 var menuBtn = $('.menu-icon'),
 menu = $('.navegacion ul');
 
@@ -12,6 +13,7 @@ menuBtn.click(function()  {
   }
 });
 
+// carrusel
 
 fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f329224d7c1ce98a9&language=en-US&page=1')
 .then(function(respuesta){
@@ -112,28 +114,24 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
         document.querySelector("li.lg").style.displindexay = "block"
         document.querySelector(".uk-modal-close-default").click()
         var nombre = document.querySelector("input.name").value
-
       }
-
-
-
     }
     document.querySelector("a.logout").onclick = function(e) {
-
       localStorage.clear()
       document.querySelector("li.prefes").style.display = "none"
       document.querySelector("li.saludop").style.display = "none"
       document.querySelector("button.btn-log").style.display = "block"
-
-
     }
-
-
   })
+
+
+
 // listadp de generos
 
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=87b4351691f0835cf822a9ad51618e50&language=en-US")
-   .then(res => res.json())
+  .then(function(respuesta){
+    return respuesta.json();
+  })
    .then(data => {
    var generos = data.genres
    for (var i = 0; i < generos.length; i++) {
@@ -142,6 +140,4 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=deebcdef6efa3e1f3292
      document.querySelector('#generos').innerHTML += '<li class="liGenero"><a href="genero.html?id='+ idGenero +'&nombre='+nombre+'">'+ nombre + '</a></li>'
    }
      })
-
-
 }
